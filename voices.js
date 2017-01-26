@@ -26,6 +26,8 @@ const US_VOICE_SSML_ALLISON = 'Hello! I\'m Allison, but you can change my voice 
 // Sample text values with Voice Transformation SSML (Lisa)
 const US_VOICE_SSML_LISA = 'Hello! I\'m Lisa, but you can change my voice however you wish. <voice-transformation type="Custom" glottal_tension="-80%"> For example, you can make my voice a bit softer, </voice-transformation> <voice-transformation type="Custom" glottal_tension="40%" breathiness="40%"> or a bit strained. </voice-transformation><voice-transformation type="Custom" timbre="Breeze" timbre_extent="60%"> You can alter my voice timbre making me sound like this person, </voice-transformation> <voice-transformation type="Custom" timbre="Sunrise"> or like another person in your different applications. </voice-transformation><voice-transformation type="Custom" breathiness="90%"> You can make my voice more breathy than it is normally. </voice-transformation><voice-transformation type="Young" strength="80%"> I can speak like a young girl. </voice-transformation><voice-transformation type="Custom" pitch="20%" pitch_range="80%" rate="60%" glottal_tension="-80%" timbre="Sunrise"> And you can combine all this with modifications of my speech rate and my tone. </voice-transformation>';
 
+const US_VOICE_SSML_MICHAEL = 'Hello! I\'m Michael, but you can change my voice however you wish. <voice-transformation type="Custom" glottal_tension="-80%"> For example, you can make my voice a bit softer, </voice-transformation> <voice-transformation type="Custom" glottal_tension="40%" breathiness="40%"> or a bit strained. </voice-transformation><voice-transformation type="Custom" timbre="Breeze" timbre_extent="60%"> You can alter my voice timbre making me sound like this person, </voice-transformation> <voice-transformation type="Custom" timbre="Sunrise"> or like another person in your different applications. </voice-transformation><voice-transformation type="Custom" breathiness="90%"> You can make my voice more breathy than it is normally. </voice-transformation><voice-transformation type="Young" strength="80%"> I can speak like a young girl. </voice-transformation><voice-transformation type="Custom" pitch="20%" pitch_range="80%" rate="60%" glottal_tension="-80%" timbre="Sunrise"> And you can combine all this with modifications of my speech rate and my tone. </voice-transformation>';
+
 const voices = [
   {
     name: 'pt-BR_IsabelaVoice',
@@ -190,6 +192,24 @@ const voices = [
     },
     description: 'Lisa: American English female voice.',
   }, {
+    name: 'US_MichaelVoice',
+    option: 'American English default',
+    language: 'en-US',
+    customizable: true,
+    gender: 'male',
+    url: 'https://stream.watsonplatform.net/text-to-speech/api/v1/voices/en-US_MichaelVoice',
+    supported_features: {
+      voice_transformation: true,
+      custom_pronunciation: true,
+    },
+    demo: {
+      text: US_TEXT,
+      ssml: US_SSML,
+      ssml_voice: US_VOICE_SSML_MICHAEL,
+    },
+    description: 'Lisa: American English female voice.',
+  },
+  {
     name: 'en-GB_KateVoice',
     option: 'British English (en-GB): Kate (female)',
     language: 'en-GB',
